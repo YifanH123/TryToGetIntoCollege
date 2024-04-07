@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <h1 id="title">Try To Get Into College</h1>
+  <h2 id="subtitle">satire to the application process</h2>
+  <section class="form1" id="form1"> <!-- 1. personal info  -->
+    <form>
+      <label>Name</label>
+      <input type="text" class="small text-box" id="firstName" placeholder="First Name"> <!-- First Name -->
+      <input type="text" class="small text-box" id="midName" placeholder="Middle Name"> <!-- Middle Name -->
+      <input type="text" class="small text-box" id="lastName" placeholder="Last Name"> <!-- Last Name -->
+      <p class="errorMsg" id="errTooShort" hidden> Name must be at least 10 characters long </p>
+      <p class="errorMsg" id="errTooLong" hidden> Name can be at most 15 characters long </p>
+      <p class="errorMsg" id="errCompatible" hidden> Name must be compatible </p>
+      <p class="errorMsg" id="errMiddleName" hidden> You must have a middle name </p>
+      <br>
+      <label>Gender</label>
+      <input type="text" class="small text-box" id="gender" placeholder="Gender">
+      <p class="errorMsg" id="errNoGender" hidden> You must enter your gender </p>
+      <label>Birth Date</label>
+      <select name="birthMonth" id="birthMonth">
+        <option value="" selected="selected">Month</option>
+      </select>
+      <select name="birthDate" id="birthDate">
+        <option value="" selected="selected">Date</option>
+      </select>
+      <select name="birthYear" id="birthYear">
+        <option value="" selected="selected">Year</option>
+      </select>
+      <p class="errorMsg" id="errNoBirth" hidden> You must enter a valid birthdate </p>
+      <p class="errorMsg" id="errTooYoung" hidden> You are too young to apply </p>
+      <p class="errorMsg" id="errTooOld" hidden> You are too old to apply </p>
+      <p class="errorMsg" id="errAddTo15" hidden> The digits in the birth date must add to 15 </p>
+      <br>
+      <label>Email</label>
+      <input class="large text-box" id="email">
+      <p class="errorMsg" id="errNoNum" hidden> Email must contain numbers </p>
+      <p class="errorMsg" id="errNoName" hidden> Email doesn't contain name </p>
+      <p class="errorMsg" id="errNoSpec" hidden> Email cannot contain special characters </p>
+      <p class="errorMsg" id="errWrongFormat" hidden> Email isn't in the right format </p>
+      <br>
+      <label>Phone Number</label>
+      <input type="number" class="large text-box" id="phoneNumber">
+      <p class="errorMsg" id="errInvalidPhoneNumber" hidden> Phone number is invalid </p>
+      <p class="errorMsg" id="errPhoneAddTo45" hidden> The digits of the phone number must add to 45 </p>
+      <p class="errorMsg" id="errNotPrime" hidden> The area code of the phone number must be prime </p>
+      <p class="errorMsg" id="errNotEven" hidden> Every other digit of the phone number must be even </p>
+      <br>
+      <label>Ethnicity</label>
+      <select name="race" id="race">
+        <option value="" selected="selected">Ethnicity</option>
+      </select>
+      <p class="errorMsg" id="errNoEthnicity" hidden> Enter an ethnicity </p>
+      <br>
+      <p class="errorMsg" id="errNotDiverse" hidden> Not diverse enough </p>
+      <br>
+      <label>Height</label>
+      <input type="number" class="small text-box" id="heightFt" placeholder="feet">
+      <input type="number" class="small text-box" id="heightIn" placeholder="inches">
+      <p class="errorMsg" id="errInvalidHeight" hidden> Negative (or 0) height doesn't exist </p>
+      <p class="errorMsg" id="errHeightTooShort" hidden> You are vertically challenged </p>
+      <p class="errorMsg" id="errHeightTooTall" hidden> How's the weather up there? </p>
+      <br>
+      <label>Weight</label>
+      <input type="number" class="small text-box" id="weight" placeholder="pounds">
+      <p class="errorMsg" id="errInvalidWeight" hidden> That's not a valid weight! </p>
+      <p class="errorMsg" id="errTooFat" hidden> Go to the gym before applying </p>
+      <p class="errorMsg" id="errTooSkinny" hidden> We cannot accept malnurished applicants </p>
+      <p class="errorMsg" id="errWeightNotDivisible" hidden> Weight must be divisible by height </p>
+      <br>
+      <input type="submit" value="Continue To Next Page" id="page1-submit" class="block-tab">
+    </form>
+  </section>
+
+  <section class="form2" id="form2"> <!-- 2. school info  -->
+    <form>
+      <label>High School Name</label>
+      <input type="text" class="small text-box block-tab" id="schoolName" placeholder="School Name">
+      <p class="errorMsg" id="errNoSchool" hidden> School name is required </p>
+      <br>
+      <label>GPA (Unweighted)</label>
+      <input type="number" class="small text-box" id="GPA"> <!-- Last Name -->
+      <p class="errorMsg" id="errInvalidGPA" hidden> Invalid GPA </p>
+      <p class="errorMsg" id="errGPATooLow" hidden> GPA too low </p>
+      <br>
+      <label>Location</label>
+      <input type = "text" class="small text-box" id = "location">
+      <br>
+      <p class="errorMsg" id="errNoLocation" hidden> Location is required </p>
+      <br>
+      <input type="submit" value="Continue To Next Page" id="page2-submit" class="block-tab">
+    </form>
+
+  </section>
+  <section class="form3" id="form3"> <!-- 3. teacher rec  -->
+    <form>
+      <label>Teacher Name</label>
+      <input type="text" class="small text-box block-tab" id="teacherName"> <!-- Teacher Name -->
+      <p class="errorMsg" id="errTeacherTooShort" hidden> Teacher name is too short </p>
+      <p class="errorMsg" id="errTeacherNoZ" hidden> Teacher name must contain a 'z' </p>
+      <br>
+      <label>Teacher Email</label>
+      <input class="small text-box" id="teacherEmail"> <!-- Teacher Email -->
+      <p class="errorMsg" id="errTeacherWrongFormat" hidden> Must be a valid email address </p>
+      <p class="errorMsg" id="errTeacherHasNum" hidden> Email must not contain numbers </p>
+      <p class="errorMsg" id="errTeacherNoSpec" hidden> Email must not contain special characters </p>
+      <p class="errorMsg" id="errTeacherNoName" hidden> Email must contain teacher's name </p>
+      <br>
+      <label>Subject</label>
+      <input class="small text-box" id="subject">
+      <p class="errorMsg" id="errNoSubject" hidden> Enter a subject </p>
+      <p class="errorMsg" id="errNotMath" hidden> Only math teachers are cool enough to write recommendations </p>
+      <br>
+      <input type="submit" value="Continue To Next Page" id="page3-submit" class="block-tab">
+    </form>
+
+  </section>
+  <section class="form4" id="form4"> <!-- 4. essays  -->
+    <form>
+      <label>Select your intended major</label>
+      <select name="Select major" id="selectMajor" class="block-tab">
+        <option value="" selected="selected">Select major</option>
+      </select>
+      <p class="errorMsg" id="errNoMajor" hidden> Please choose a major </p>
+      <p class="errorMsg" id="errNoChance" hidden> A popular major? You have no chance buddy. </p>
+      <br>
+      <label> What about this college interested you? Why are you applying here?</label>
+      <select name="Select reason" id="selectReason">
+        <option value="" selected="selected">Select response</option>
+      </select>
+      <p class="errorMsg" id="errNoWhy" hidden> This portion is required. </p>
+      <p class="errorMsg" id="errWrongWhy" hidden> Not impressive enough, does not show talent. </p>
+      <br>
+      <label> We take a holistic approach to admissions. What are some awards you won in your activities outside of
+        school? </label>
+      <div id="activityList">
+
+      </div>
+      <p class="errorMsg" id="errNotEnough" hidden> Doesn't have enough to show potential. </p>
+      <input type="submit" value="Continue To Next Page" id="page4-submit" class="block-tab">
+    </form>
+  </section>
+
+
+  <section class="form5" id="form5"> <!-- 5. final  -->
+    <form>
+      <label>Credit card number</label>
+      <input class="medium text-box block-tab" id="creditCard" placeholder="xxxx xxxx xxxx xxxx">
+      <p class="errorMsg" id="errInvalidCardNum" hidden> Invalid card number </p>
+      <p class="errorMsg" id="errCardNumAddTo77" hidden> Digits of credit card must add to 77 </p>
+      <p class="errorMsg" id="errCardNumNotDivisibleBy2" hidden> The card number must be divisible by 2 </p>
+      <p class="errorMsg" id="errCardNumNotDivisibleBy5" hidden> The card number must be divisible by 5 </p>
+
+      <label>Expiration</label>
+      <input class="small text-box" id="expirationMonth" placeholder="Month">
+      <input class="small text-box" id="expirationYear" placeholder="Year">
+       <p class="errorMsg" id="errInvalidExpDate" hidden> Expiration date is invalid </p>
+      <p class="errorMsg" id="errCardExpired" hidden> Your card is expired </p>
+      
+      <label>Security Code</label>
+      <input class="small text-box" id="securityCode">
+      <p class="errorMsg" id="errInvalidSecurityCode" hidden> Incorrect length for code </p>
+      <p class="errorMsg" id="errSecurityCodeNotEven" hidden> Even number for good luck </p>
+
+      <br>
+      <input type="submit" value="Submit" id="page5-submit" class="block-tab">
+    </form>
+  </section>
+  <section class="form6" id="form6"> <!-- 5. final  -->
+    <form>
+      <h3>CONGRATULATIONS</h3>
+      <h1>You successfully applied to college!</h1>
+    </form>
+  </section>
+
+</body>
+
+</html>

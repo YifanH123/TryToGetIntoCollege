@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /* overflow-x: hidden; */
+  background-image: url("/beige-aged-background.jpg");
+  background-size: cover;
+  /* <a href="https://www.freepik.com/free-photo/beige-aged-background_4100990.htm#query=tan%20background&position=2&from_view=keyword&track=ais&uuid=f5ececd1-8c3b-48c8-bee0-00bdf86c8ac5">Image by rawpixel.com</a> on Freepik */
+} 
+
+h1,
+h2,
+h3 {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 4em;
+}
+
+div {
+  width:fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  padding: 2px;
+  margin-bottom: 2px;
+}
+
+.form1 {
+  position: absolute;
+  --n: 1;
+  left: 0%;
+  top: 10%;
+  height: 90%;
+  width: 100%;
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+    /* Move element 100% of its width to the left */
+  }
+}
+
+.form2 {
+  position: absolute;
+  left: 100%;
+  top: 5%;
+  height: 90%;
+  width: 100%;
+}
+
+.form3 {
+  position: absolute;
+  left: 200%;
+  top: 5%;
+  height: 90%;
+  width: 100%;
+}
+
+.form4 {
+  position: absolute;
+  left: 300%;
+  top: 5%;
+  height: 90%;
+  width: 100%;
+}
+
+.form5 {
+  position: absolute;
+  left: 400%;
+  top: 5%;
+  height: 90%;
+  width: 100%;
+}
+
+.form6 {
+  position: absolute;
+  left: 500%;
+  top: 5%;
+  height: 90%;
+  width: 100%;
+}
+
+form {
+  width: 50%;
+  margin: auto;
+}
+
+.small {
+  width: 200px;
+}
+
+.medium {
+  width: 404px;
+}
+
+.large {
+  width: 606px;
+}
+
+label {
+  display: block;
+  width: 100%;
+}
+
+.text-box,
+select {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #c0c0c0;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+}
+ .text-box:focus {
+  border-color: "blue";
+} 
+input[type=submit] {
+  padding: 10px 20px;
+  /* Adding padding to button */
+  background-color: #333;
+  /* Setting button background color */
+  color: white;
+  /* Setting button text color */
+  border: none;
+  /* Removing button border */
+  border-radius: 5px;
+  /* Adding rounded corners to button */
+  cursor: pointer;
+  /* Changing cursor to pointer on hover */
+  display: inline-block;
+  /* Making button display as inline-block */
+}
+
+input[type=submit]:hover {
+  background-color: #555;
+  /* Darkening button background color on hover */
+}
+
+.errorMsg {
+  color: red;
+}
