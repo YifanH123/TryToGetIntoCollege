@@ -155,20 +155,20 @@
   <section class="form5" id="form5"> <!-- 5. final  -->
     <form>
       <label>Credit card number</label>
-      <input class="medium text-box block-tab" id="creditCard" placeholder="xxxx xxxx xxxx xxxx">
+      <input type="number" class="medium text-box block-tab" id="creditCard" placeholder="xxxxxxxxxxxxxxxx">
       <p class="errorMsg" id="errInvalidCardNum" hidden> Invalid card number </p>
       <p class="errorMsg" id="errCardNumAddTo77" hidden> Digits of credit card must add to 77 </p>
       <p class="errorMsg" id="errCardNumNotDivisibleBy2" hidden> The card number must be divisible by 2 </p>
       <p class="errorMsg" id="errCardNumNotDivisibleBy5" hidden> The card number must be divisible by 5 </p>
 
       <label>Expiration</label>
-      <input class="small text-box" id="expirationMonth" placeholder="Month">
-      <input class="small text-box" id="expirationYear" placeholder="Year">
-       <p class="errorMsg" id="errInvalidExpDate" hidden> Expiration date is invalid </p>
+      <input type="number" class="small text-box" id="expirationMonth" placeholder="Month">
+      <input type="number" class="small text-box" id="expirationYear" placeholder="Year">
+      <p class="errorMsg" id="errInvalidExpDate" hidden> Expiration date is invalid </p>
       <p class="errorMsg" id="errCardExpired" hidden> Your card is expired </p>
       
       <label>Security Code</label>
-      <input class="small text-box" id="securityCode">
+      <input type="number" class="small text-box" id="securityCode">
       <p class="errorMsg" id="errInvalidSecurityCode" hidden> Incorrect length for code </p>
       <p class="errorMsg" id="errSecurityCodeNotEven" hidden> Even number for good luck </p>
 
